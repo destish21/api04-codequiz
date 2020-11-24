@@ -1,0 +1,22 @@
+body {
+    background-color: #8c8c9d;
+    align-items: center;
+}
+
+#container {
+    color: #86afad;
+    text-align: center;
+}
+
+.card-body {
+    background-color: #e5e4d7;
+    align-items: center;
+    text-align: center;
+
+}
+.card-text {
+    align-items: center;
+    text-align: center;
+/* font-family: serif; */
+
+}
