@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API Code-Quiz</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style4.css">
+
+</head>
+
+<body>
+  <div id="quizContainer" class="container">
+    <div class="title">API CODE-QUIZ</div>
+    <p>Choose the correct answer from the given choices.
+      There are five questions and a total of 85 seconds that is 17sec per questions.
+      The total scrore is the sum of the time each correct answer is answer.
+    </p>
+    <div class="good">Good Luck!</div>
+
+    <div id="question" class="question"></div>
+    <label class="choice"> <input type="radio" name="choice" value="A" />
+      <spaan id="choiceA"></spaan>
+    </label>
+    <label class="choice"> <input type="radio" name="choice" value="B" />
+      <spaan id="choiceB"></spaan>
+    </label>
+    <label class="choice"> <input type="radio" name="choice" value="C" />
+      <spaan id="choiceC"></spaan>
+    </label>
+    <label class="choice"> <input type="radio" name="choice" value="D" />
+      <spaan id="choiceD"></spaan>
+    </label>
+    <button id="nextButton" class="next-btn" onclick="loadNextQuestion();">NextQuestion</button>
+
+  </div>
+  <div id="result" class="conainer result" style="display: none;"></div>
+
+  <script src="script5.js"></script>
+
+</body>
+
+</html>

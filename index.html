@@ -11,8 +11,11 @@
   <link rel="stylesheet" href="quiz.css">
 </head>
 <body>
-
-  <div id="container text-center">
+  <nav class="navbar bg-dark">
+    <button class=" navButton text-light btn bttn-secondary" id="view-highscore-btn">High Score Record</button>
+    <h5 class=" navTimer text-light">Timer  <span class="text-light " id="time-display">0:00</span>s</h5>
+</nav>
+  <div id="container-fluid text-center">
     <div class="row md-2">
       <div class="col md-6 text-center padding-20px">
 
@@ -26,24 +29,27 @@
  -->
 
         <div class="card" style="width: 18rem;">
-          <div class="card-body">
+          <div class="card-body container-fluid">
             <p class="card-text">Choose the correct answer from the given choices.
-              There are  three questions and a total of 48 seconds that is 16sec per questions. 
+              There are  five questions and a total of 85 seconds that is 17sec per questions. 
               The total scrore is the sum of the time each correct answer is answer.</p>
 
               <div class="Showing Up">Good Luck!</div>
+
+
+              <div class="row md-2">
+                <dev class="col md-6 text-center">
+                  <buttontype="click"> start quiz </button>
+                </dev>
+              </div>
+            
 
           </div>
         </div>
 
     
-  <div class="row md-2">
-    <dev class="col md-6 text-center">
-      <buttontype="click"> start quiz </button>
-    </dev>
-  </div>
-  </div>
-    </div> 
+  <!-- </div>
+    </div>  -->
 
 
 <div id="container lighe-dardk">
@@ -53,6 +59,18 @@
     </div>
   </div>
 </div>
+
+
+
+<div class="quiz-container">
+  <div id="quiz"></div>
+</div>
+<button id="previous">Previous Question</button>
+<button id="next">Next Question</button>
+<button id="submit">Submit Quiz</button>
+<div id="results"></div>
+
+
 
   <script src="script.js" ></script>
 </body>
