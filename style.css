@@ -73,7 +73,7 @@ p {
     width: 30px;
 }
 .choice:hover {
-    background-color: #08038c;
+    background-color: orange;
     color: #f6f6f6;
 
 }
@@ -103,6 +103,29 @@ p {
 background-color: #08038c;
 color: #000;
 }
+
+/* #start-btn {
+
+    background-color:rgba( 255, 255, 255, 0.5);
+    outline: none;
+    height: 35px;
+    margin: 10px;
+    border: none;
+    width: 100px;
+    float: right;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 1rem;
+
+}
+
+#start-btn:hover {
+    background-color: purple;
+    color: #f6f6f6;
+    font-size: 1rem;
+}
+ */
+
 
  @media screen and (min-width:425px) and (max-width:1223px) {
     .container {

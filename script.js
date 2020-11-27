@@ -1,3 +1,4 @@
+function myQuiz() {
 var container = documentgetElmenetById('quizContainer');
 var questionEl = document.getElementById('question');
 var choiceA = document.getElementById('choiceA');
@@ -68,6 +69,7 @@ var currentQuestion = [
   }
 
 ];
+}
 
 function loadQuestion(questionIndex) {
   var q = questions[questionsIndex];
@@ -123,4 +125,5 @@ function loadNextQuestion() {
   loadQuestion(currentQuestion);
 }
 // loadNextQuestion(currentQuestion);
+loadcurrentQuestion();
 myQuiz();
