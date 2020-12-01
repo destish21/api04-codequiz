@@ -13,7 +13,7 @@ body {
 
 }
 .container {
-    height: 430px;
+    height: 530px;
     width: 1000px;
     position:absolute;
     top: 50%;
@@ -21,7 +21,7 @@ body {
     transform: translateX(-50%) translateY(-50%);
     background-color:  #e5e4d7;
     padding: 20px;
-    border: 1px solid #08038c;
+    border: 2px solid black;
     border-radius: 20px;
     box-shadow: 0 0 8px 3px #fff;
 
@@ -54,12 +54,13 @@ p {
 }
 
 .question {
-    background-color: #08038c;
+    background-color: rgba( 255, 255, 255, 0.5);
     font-size: 22px;
     padding: 20px;
-    margin: 10px 0 10px 0;
-    border-radius: 20px;
+    margin: 10px 0 10px 10px;
+    border-radius: 10px;
     color: #f6f6f6;
+    font-weight: bold;
 
 }
 .choice {
@@ -70,41 +71,15 @@ p {
     padding: 30px;
     margin: 10px 0 10px 10px;
     border-radius: 20px;
-    width: 30px;
+    width: 200px;
 }
 .choice:hover {
     background-color: orange;
     color: #f6f6f6;
 
 }
-.next-btn {
-    background-color: 255, 255, 255, 0.5;
-    outline: none;
-    height: 35px;
-    margin: 10px;
-    border: none;
-    width: 100px;
-    float: right;
-    cursor: pointer;
-    border-radius: 20px;
-}
 
-.next-btn:hover {
-    background-color: #08038c;
-    color: #f6f6f6;
-}
-
-.result {
-    height: 100px;
-    text-align: center;
-    font-size: 75px;
-}
-.choice input:checked {
-background-color: #08038c;
-color: #000;
-}
-
-/* #start-btn {
+#start-btn {
 
     background-color:rgba( 255, 255, 255, 0.5);
     outline: none;
@@ -124,8 +99,38 @@ color: #000;
     color: #f6f6f6;
     font-size: 1rem;
 }
- */
 
+.next-btn {
+    background-color: 255, 255, 255, 0.5;
+    outline: none;
+    height: 35px;
+    margin: 10px;
+    border: none;
+    width: 100px;
+    float: right;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.next-btn:hover {
+    background-color:purple;
+    color: #f6f6f6;
+}
+
+.result {
+    height: 100px;
+    text-align: center;
+    font-size: 75px;
+}
+.choice input:checked {
+background-color: #08038c;
+color: #000;
+}
+
+
+/* .head {
+    width: 1000px;
+} */
 
  @media screen and (min-width:425px) and (max-width:1223px) {
     .container {

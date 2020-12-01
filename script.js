@@ -1,75 +1,87 @@
-function myQuiz() {
-var container = documentgetElmenetById('quizContainer');
+var container = document.getElementById('quizContainer');
+console.log(container)
 var questionEl = document.getElementById('question');
+var time = document.getElementById('time-disply')
 var choiceA = document.getElementById('choiceA');
 var choiceB = document.getElementById('choiceB');
 var choiceC = document.getElementById('choiceC');
 var choiceD = document.getElementById('choiceD');
 var nextButton = document.getElementById('nextButton');
+var startButton = document.getElementById('Start-btn')
 var result = document.getElementById('result');
+
 var currentQuestion = 0
 var score = 0
-var totQuestion = questions.length;
-var time = 0;
+var totQuestion = question.length;
+var count = 17;
 var timePerQuestion = 17;
-var timeTotal = (17 * currentQuestions.length);
+var timeTotal = (17 * currentQuestion.length);
 
-var currentQuestion = [
-  {
-    question: "What does HTMl stand for?",
-    answers: {
-      a: "hyper Text Mark up language",
-      b: "Home Tool Mark up Language",
-      c: "Google Text Mark up language",
-      d: "Hyper links and Text Mark up Language"
+var currentQuestion = function myQuiz() {
+  [
+    {
+      question: "What does HTMl stand for?",
+      answers: {
+        a: "hyper Text Mark up language",
+        b: "Home Tool Mark up Language",
+        c: "Google Text Mark up language",
+        d: "Hyper links and Text Mark up Language"
+      },
+      correctAnswer: "a"
     },
-    correctAnswer: "a"
-  },
-  {
-    question: "Choose the correct HTML elemenet for the largest heading?",
-    answers: {
-      a: "<head>",
-      b: "<heading>",
-      c: "<h6>",
-      d: "<h1>"
+    {
+      question: "Choose the correct HTML elemenet for the largest heading?",
+      answers: {
+        a: "<head>",
+        b: "<heading>",
+        c: "<h6>",
+        d: "<h1>"
+      },
+      correctAnswer: "d"
     },
-    correctAnswer: "d"
-  },
-  {
-    question: "InSide which HTML elenent do we Put the javaScript?",
-    answers: {
-      a: "<js>",
-      b: "<scripting>",
-      c: "<script>",
-      d: "<javascript>"
+    {
+      question: "InSide which HTML elenent do we Put the javaScript?",
+      answers: {
+        a: "<js>",
+        b: "<scripting>",
+        c: "<script>",
+        d: "<javascript>"
+      },
+      correctAnswer: "c"
     },
-    correctAnswer: "c"
-  },
 
 
-  {
-    question: "Where is the correct place to insert ajavaScript?",
-    answers: {
-      a: "<The head section>",
-      b: "<The body section>",
-      c: "<a & b is answer>",
-      d: "<any where>"
+    {
+      question: "Where is the correct place to insert ajavaScript?",
+      answers: {
+        a: "<The head section>",
+        b: "<The body section>",
+        c: "<a & b is answer>",
+        d: "<any where>"
+      },
+      correctAnswer: "c"
     },
-    correctAnswer: "c"
-  },
-  {
-    question: "What is correct Syntax for referring to an external Script called xxx.js ?",
-    answers: {
-      a: "function = myfunction",
-      b: "functionmyFunction()",
-      c: "function:myfunction",
-      d: "myfunction{}"
-    },
-    correctAnswer: "b"
-  }
+    {
+      question: "What is correct Syntax for referring to an external Script called xxx.js ?",
+      answers: {
+        a: "function = myfunction",
+        b: "functionmyFunction()",
+        c: "function:myfunction",
+        d: "myfunction{}"
+      },
+      correctAnswer: "b"
+    }
 
-];
+  ];
 }
+
+// startButton.addEventListener('click', StartGame);
+// function  StartGame() {
+//   questionContainer.textContent = "currentquestion";
+//   currentQuestion = 0;
+//   return;
+
+// }
 
 function loadQuestion(questionIndex) {
   var q = questions[questionsIndex];
@@ -88,7 +100,7 @@ function loadQuestion(questionIndex) {
       timeDisplayArea.innerHTML = "0.00";
       renderLocalStorage();
     }
-  }, 1000);
+  }, 17000);
 };
 
 function nextQuestionClick() {
@@ -124,6 +136,7 @@ function loadNextQuestion() {
   }
   loadQuestion(currentQuestion);
 }
-// loadNextQuestion(currentQuestion);
 loadcurrentQuestion();
-myQuiz();
+// myQuiz();
+loadNextQuestion(currentQuestion);
+

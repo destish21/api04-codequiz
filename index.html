@@ -12,6 +12,12 @@
 </head>
 
 <body>
+<!-- <div class="head">
+  <nav class="navbar bg-dark">
+    <button class=" navButton text-light btn bttn-secondary" id="view-highscore-btn">High Score Record</button>
+    <h5 class=" navTimer text-light">Timer  <span class="text-light " id="time-display">0:00</span>s</h5>
+</nav>
+</div> -->
   <div id="quizContainer" class="container">
     <div class="title">API CODE-QUIZ</div>
     <p>Choose the correct answer from the given choices.
@@ -33,13 +39,14 @@
     <label class="choice"> <input type="radio" name="choice" value="D" />
       <spaan id="choiceD"></spaan>
     </label>
-    <button id="nextButton" class="next-btn" onclick="loadNextQuestion();">NextQuestion</button>
-    <!-- <div class="row m-2">
-      <div class="col text-right">
-          <button class="btn btn-primary btn-lg" id="start-btn">Start Quiz</button>
-      </div>
-  </div> -->
+    <div class="conrols">
 
+      <button id="nextButton" class="next-btn" onclick="loadNextQuestion();">NextQuestion</button>
+
+      <button class="Start.Button" id="start-btn">Start Quiz</button>
+
+    </div>
+  </div>
   </div>
   <div id="result" class="conainer result" style="display: none;"></div>
 
