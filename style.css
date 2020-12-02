@@ -12,6 +12,25 @@ body {
     background-color: #8c8c9d;
 
 }
+
+.navButton {
+    font-size: 20px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+.navTimer {
+    font-size: 20px;
+    margin-bottom: 0px;
+    padding-bottom: 20px;
+    width: 80%;
+    display: inline-block;
+
+}
+
+.navButton:hover {
+ background-color: rgb(100, 179, 152);
+}
+
 .container {
     height: 530px;
     width: 1000px;
@@ -21,6 +40,7 @@ body {
     transform: translateX(-50%) translateY(-50%);
     background-color:  #e5e4d7;
     padding: 20px;
+    margin: 30px;
     border: 2px solid black;
     border-radius: 20px;
     box-shadow: 0 0 8px 3px #fff;
@@ -41,16 +61,14 @@ body {
     font-size: 16px;
     font-weight:bold;
     font-family: serif;
-
 }
+
 p {
     padding-top:5px;
     text-align: center;
     font-size: 14px;
     font-weight: bold;
-    font-family: serif;
-
-  
+    font-family: serif; 
 }
 
 .question {
@@ -61,8 +79,8 @@ p {
     border-radius: 10px;
     color: black;
     font-weight: bold;
-
 }
+
 .choice {
     background-color: rgba(255, 255,255, 0.5);
     color: #000000;
@@ -73,14 +91,18 @@ p {
     border-radius: 20px;
     width: 200px;
 }
+
 .choice:hover {
     background-color: orange;
     color: #f6f6f6;
-
 }
 
+.choice input:checked {
+    background-color: #08038c;
+    color: #000;
+    }
+        
 #start-btn {
-
     background-color:rgba( 255, 255, 255, 0.5);
     outline: none;
     height: 35px;
@@ -91,7 +113,6 @@ p {
     cursor: pointer;
     border-radius: 20px;
     font-size: 1rem;
-
 }
 
 #start-btn:hover {
@@ -122,25 +143,29 @@ p {
     text-align: center;
     font-size: 75px;
 }
-.choice input:checked {
-background-color: #08038c;
-color: #000;
-}
-
-
-/* .head {
-    width: 1000px;
-} */
 
  @media screen and (min-width:425px) and (max-width:1223px) {
-    .container {
+    .container{
         width: 90%;
+        margin:0px;
     }
 } 
 
+@media screen and (min-width:425px) and (max-width:1223px) {
+    .choice {
+        width: 80%;
+        display: inline;
+        margin: 10px;
+    }
+} 
 
-
-
+@media screen and (min-width:425px) and (max-width:1223px) {
+ .navTimer {
+        width: 100%;
+        display: inline;
+        
+    }
+} 
 
 
 
