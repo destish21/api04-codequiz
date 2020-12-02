@@ -7,7 +7,8 @@ var choiceB = document.getElementById('choiceB');
 var choiceC = document.getElementById('choiceC');
 var choiceD = document.getElementById('choiceD');
 var nextButton = document.getElementById('nextButton');
-var startButton = document.getElementById('Start-btn')
+var timeDisplayArea =document.getElementById("timeDispayArea")
+var startButton = document.getElementById('start-btn')
 var result = document.getElementById('result');
 
 var currentQuestion = 0
@@ -15,9 +16,8 @@ var score = 0
 var totQuestion = question.length;
 var count = 17;
 var timePerQuestion = 17;
-var timeTotal = (17 * currentQuestion.length);
 
-var currentQuestion = function myQuiz() {
+var questions =  
   [
     {
       question: "What does HTMl stand for?",
@@ -73,23 +73,29 @@ var currentQuestion = function myQuiz() {
     }
 
   ];
+
+  var timeTotal = (17 * questions.length);
+
+
+startButton.addEventListener('click', StartGame);
+function  StartGame() {
+  // console.log("ITS ALIVE")
+  questionEl.textContent = "currentquestion";
+  currentQuestion = 0;
+  loadQuestion(currentQuestion)
+
 }
 
-// startButton.addEventListener('click', StartGame);
-// function  StartGame() {
-//   questionContainer.textContent = "currentquestion";
-//   currentQuestion = 0;
-//   return;
-
-// }
-
 function loadQuestion(questionIndex) {
-  var q = questions[questionsIndex];
+  var q = questions[questionIndex];
+  // console.log("DESTA", q)
   questionEl.textContent = (questionIndex + 1) + ',' + q.question;
-  choA.textContent = q.choiceA;
-  choB.textContent = q.choiceB;
-  choC.textContent = q.choiceC;
-  choD.textContent = q.choiceD;
+  choiceA.textContent = q.answers.a
+  choiceB.textContent = q.answers.b
+  // console.log(q.choiceC)
+  // console.log(choiceC)
+  choiceC.textContent = q.answers.c
+  choiceD.textContent = q.answers.d
 
   time = timeTotal;
   totalTimerInterval = setInterval(function () {
@@ -112,14 +118,14 @@ function nextQuestionClick() {
   })
 };
 
-function loadNextQuestion() {
+function loadNextQuestion(totQuestions) {
   var selectedChoice = document.querySelector('input[type=radio]:checked');
   if (!selectedChoice) {
     alert('please select your answer!');
     return;
   }
   var answer = selectedChoice.value;
-  if (questions[currentQuestion].answer == answer) {
+  if (questions[currentQuestion].answers == answer) {
     score += 10;
 
   }
@@ -128,7 +134,7 @@ function loadNextQuestion() {
   if (currentQuestion == totQuestion - 1) {
     nextButton.textContent = 'Finsh';
   }
-  if (currentQuestion = totQuestions) {
+  if (currentquestions = totQuestions) {
     container.style.display = 'none';
     resultCont.style.display = '';
     resultCont.textContent = 'Your Score' + score;
@@ -136,7 +142,4 @@ function loadNextQuestion() {
   }
   loadQuestion(currentQuestion);
 }
-loadcurrentQuestion();
-// myQuiz();
-loadNextQuestion(currentQuestion);
-
+loadNextQuestion(question);
