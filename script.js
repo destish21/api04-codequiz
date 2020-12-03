@@ -1,12 +1,11 @@
 var container = document.getElementById('quizContainer');
 var questionEl = document.getElementById('question');
-var time = document.getElementById('time-disply')
+var timeDisplayArea = document.getElementById("timeDispayArea")
 var choiceA = document.getElementById('choiceA');
 var choiceB = document.getElementById('choiceB');
 var choiceC = document.getElementById('choiceC');
 var choiceD = document.getElementById('choiceD');
 var nextButton = document.getElementById('nextButton');
-var timeDisplayArea = document.getElementById("timeDispayArea")
 var startButton = document.getElementById('start-btn')
 var result = document.getElementById('result');
 
@@ -78,7 +77,7 @@ var timeTotal = (17 * questions.length);
 
 startButton.addEventListener('click', StartGame);
 function StartGame() {
-  questionEl.textContent = "currentquestion";
+  questionEl.textContent = "currentQuestion";
   currentQuestion = 0;
   loadQuestion(currentQuestion)
 }
@@ -92,7 +91,7 @@ function loadQuestion(questionIndex) {
   choiceD.textContent = q.answers.d
   time = timeTotal;
   totalTimerInterval = setInterval(function () {
-    time = time - 1;
+    time = time-1;
     timeDisplayArea.innerHTML = time
     if (time <= 0) {
       clearInterval(totalTimerInterval);
@@ -113,7 +112,7 @@ function nextQuestionClick() {
 function loadNextQuestion(totQuestions) {
   var selectedChoice = document.querySelector('input[type=radio]:checked');
   if (!selectedChoice) {
-    alert('please select your answer!');
+    alert('please choose your answer!');
     return;
   }
   var answer = selectedChoice.value;

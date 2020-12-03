@@ -5,6 +5,7 @@ This is Coding quiz home work I did an appication for the taking Coding quiz in 
  For my style.css I used riferance from youtube and I made risponse page by media quiry.
  It also includes start quiz button, Next quiz button, result and timer button.
 I gave 17sec per question totaltime 85 second and startes count from 85second.
-![api04-codequiz](screenshot03.png)
+ I included font-size google from Boot strap.
+![api04-codequiz](screenshot04.png)
 
 URL:  https://destish21.github.io/api04-codequiz/
