@@ -45,7 +45,6 @@ var questions =
       correctAnswer: "c"
     },
 
-
     {
       question: "Where is the correct place to insert ajavaScript?",
       answers: {
@@ -91,7 +90,7 @@ function loadQuestion(questionIndex) {
   choiceD.textContent = q.answers.d
   time = timeTotal;
   totalTimerInterval = setInterval(function () {
-    time = time-1;
+    time = time - 1;
     timeDisplayArea.innerHTML = time
     if (time <= 0) {
       clearInterval(totalTimerInterval);
