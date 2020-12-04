@@ -1,4 +1,4 @@
-# CODING-QUIZ
+# api04-codequiz
 This is Coding quiz home work I did an appication for the taking Coding quiz in cluding 5 questions with its choice and correct answer in Array terms.
  In my home work I included index.html, style.css, script.js and screen shot image
 
