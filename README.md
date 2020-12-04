@@ -7,5 +7,4 @@ This is Coding quiz home work I did an appication for the taking Coding quiz in 
 I gave 17sec per question totaltime 85 second and startes count from 85second.
  I included font-size google from Boot strap.
 ![api04-codequiz](Screenshot04.png)
-
-URl: https://destish21.github.io/api04-codequiz/
+URL: https://destish21.github.io/api04-codequiz/
