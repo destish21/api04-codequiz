@@ -72,7 +72,7 @@ var currentQuestion = 0
 var score = 0
 var totQuestion = questions.length;
 
-var timeTotal = (17 * questions.length);
+var timeTotal = 60;
 
 startButton.addEventListener('click', StartGame);
 function StartGame() {
@@ -97,7 +97,7 @@ function loadQuestion(questionIndex) {
       timeDisplayArea.innerHTML = "0.00";
       renderLocalStorage();
     }
-  }, 17000);
+  }, 1000);
 };
 
 function nextQuestionClick() {
@@ -132,3 +132,7 @@ function loadNextQuestion(totQuestions) {
   }
   loadQuestion(currentQuestion);
 }
+loadQuestion();
+nextQuestionClick();
+renderLocalStorage();
+
