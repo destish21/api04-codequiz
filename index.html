@@ -2,55 +2,30 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CODING-QUIZ</title>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="style.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CODING-QUIZ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/style.css">
 </head>
 
 <body>
-  <nav class="navbar bg-dark">
-    <button class=" navButton text-light btn bttn-secondary" id="view-highscore-btn">High Score Record</button>
-    <h5 class=" navTimer text-light">Timer<span class="text-light " id="timeDispayArea">0:00</span>s</h5>
-  </nav>
-
-  </div>
-  <div id="quizContainer" class="container">
-    <div class="title"> CODING-QUIZ</div>
-    <p>Choose the correct answer from the given choices.
-      There are five questions and a total of 85 seconds that is 17sec per questions.
-      The total scrore is the sum of the time each correct answer is answer.
-    </p>
-    <div class="good">Good Luck!</div>
-    <div id="question" class="question"></div>
-    <label class="choice"> <input type="radio" name="choice" value="A" />
-      <span id="choiceA"></span>
-    </label>
-    <label class="choice"> <input type="radio" name="choice" value="B" />
-      <span id="choiceB"></span>
-    </label>
-    <label class="choice"> <input type="radio" name="choice" value="C" />
-      <span id="choiceC"></span>
-    </label>
-    <label class="choice"> <input type="radio" name="choice" value="D" />
-      <span id="choiceD"></span>
-    </label>
-    <div class="conrols">
-
-      <button id="nextButton" class="next-btn" onclick="loadNextQuestion();">NextQuestion</button>
-
-      <button class="Start.Button" id="start-btn">Start Quiz</button>
-
+    <nav class="navbar bg-dark">
+        <button class=" navButton text-light btn bttn-secondary" onclick="getMyScores()" id="individualRecordDiv">High
+            Score
+            Record</button>
+        <h5 class=" navTimer text-light">Timer<span class="text-light " id="timeDispayArea">0:00</span>s</h5>
+    </nav>
+    <div id="quizContainer" class="container">
+        <div class="title"> CODING-QUIZ</div>
+        <p>Choose the correct answer from the given choices.
+            There are five questions it has 20 point each of them and a total of 30 seconds
+            that is 6 sec per questions.The total scrore is the
+            sum of the time each correct answer is answer.
+        </p>
+        <button class="Start.Button" id="start-btn">Start Quiz</button>
     </div>
-  </div>
-  </div>
-  <div id="result" class="conainer result" style="display: none;"></div>
+    <div id="result" class="conainer result" style="display: none;"></div>
 
-  <script src="script.js"></script>
-
+    <script src="./assets/script.js"></script>
 </body>
-
-</html>
