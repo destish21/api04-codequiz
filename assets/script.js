@@ -139,21 +139,37 @@ function checkAnswerAndNext() {
   var myAnswer = document.getElementsByName('choice')
   var correctA = questions[currentQuestion].correctAnswer
 
-  // if(!val.checked){
-  //   alert('please choose your answer!');
-  //   return;
-  // }
+  var count = 0
   for (val of myAnswer) {
     if (val.checked) {
       if (val.value === correctA) {
-        console.log('correct answer')
+        // console.log('correct answer')
+        // alert('green');
         score = score + 5
-
+        
+        container.style.backgroundColor = "green"
+        setTimeout(() => {
+          container.style.backgroundColor = '#e5e4d7'
+        }, 300);
         //console.log(score)
       } else if (val.value !== correctA) {
-        console.log('Wrong answer')
+        // console.log('Wrong answer')
+        // alert('red');
+        container.style.backgroundColor = "red"
+        setTimeout(() => {
+          container.style.backgroundColor = "#e5e4d7"
+
+        }, 300);
       }
+    } else {
+      count++
+
     }
+  }
+  if (count == myAnswer.length) {
+    alert('please choose your answer!');
+    return;
+
   }
 
   container.innerHTML = '';
